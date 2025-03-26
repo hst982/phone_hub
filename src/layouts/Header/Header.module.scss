@@ -1,0 +1,97 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--primary-color);
+}
+
+.inner {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--layout-width, 1200px);
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    color: #fad06c;
+    padding-right: 8px;
+
+    a {
+        color: inherit;
+        display: flex;
+    }
+
+    svg {
+        width: 160px;
+        height: 45px;
+    }
+}
+
+.actions {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    svg {
+        color: var(--white-color);
+        width: 26px;
+        height: 26px;
+    }
+}
+
+.cart {
+    display: flex;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.login,
+.register {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.login {
+    position: relative;
+    margin-right: 8px;
+    padding-right: 8px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1.5px;
+        height: 60%;
+        background-color: var(--white-color);
+        transform: translateY(-50%);
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: var(--white-color);
+    text-decoration: none;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+}

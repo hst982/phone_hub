@@ -1,0 +1,55 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+
+.html {
+    font-size: 62.5%;
+}
+
+:root {
+
+    --primary-color: #2b92e4;
+    --second-color: #FF6B00;
+    --background-color: #F8F9FA;
+    --text-color: #333;
+    --white-color: #fff;
+
+    --primary-font: 'Inter', sans-serif;
+    --second-font: 'Montserrat', sans-serif;
+    --layout-width: 1200px;
+    --margin-top-container: 80px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+    overflow-y: overlay;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+    font-size: 1rem;
+    font-family: var(--second-font);
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+}
+
+.container {
+    padding-top: var(--margin-top-container);
+    width: var(--layout-width);
+    margin: 0 auto;
+}

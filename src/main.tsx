@@ -2,12 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 import App from './App.tsx'
-import MainLayout from './layouts/MainLayout'
+import DefaultStyle from './components/DefaultStyle'
 
 createRoot(document.getElementById('root')!).render(
-  <MainLayout>
+  <DefaultStyle>
     <StrictMode>
       <App />
     </StrictMode>
-  </MainLayout>,
+  </DefaultStyle>,
 )
