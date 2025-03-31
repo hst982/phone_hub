@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind'
-import { Link } from 'react-router'
 
 import style from './SideBar.module.scss'
-import images from '@/assets/images'
+import images from '../../assets/images'
 import Menu, { MenuItem } from './Menu'
 
 const cx = classNames.bind(style)

@@ -4,13 +4,14 @@ import { Link } from 'react-router'
 
 // import required modules
 import { Pagination, Autoplay, Navigation } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import '/node_modules/swiper/swiper-bundle.css'
+// import 'swiper/css'
+// import 'swiper/css/pagination'
 
 // import SideBar from '@/layouts/SideBar'
 import style from './Home.module.scss'
-import images from '@/assets/images'
-import FlashSale from '@/components/FlashSale'
+import images from '../../assets/images'
+import FlashSale from '../../components/FlashSale'
 
 const cx = classNames.bind(style)
 
