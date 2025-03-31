@@ -1,7 +1,7 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
 
-.html {
+html {
     font-size: 62.5%;
 }
 
@@ -16,7 +16,7 @@
     --primary-font: 'Inter', sans-serif;
     --second-font: 'Montserrat', sans-serif;
     --layout-width: 1200px;
-    --margin-top-container: 80px;
+    --margin-top-container: 65px;
 }
 
 * {
@@ -41,7 +41,6 @@ h3,
 h4,
 h5,
 button {
-    font-size: 1rem;
     font-family: var(--second-font);
     font-weight: 600;
     margin: 0;
@@ -52,4 +51,28 @@ button {
     padding-top: var(--margin-top-container);
     width: var(--layout-width);
     margin: 0 auto;
+}
+
+.main {
+    padding: 10px 0;
+}
+
+:global {
+    .card {
+        background-color: var(--white-color);
+        box-shadow: 0 2px 12px rgb(0 0 0 / 12%);
+        border-radius: 8px;
+        padding: 10px;
+        // margin: 16px 0;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }

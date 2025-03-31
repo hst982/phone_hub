@@ -22,6 +22,9 @@ interface RoutePaths {
   orderHistory: string
   about: string
   contact: string
+
+  // category
+  mobile: string
 }
 
 const routes: Readonly<RoutePaths> = {
@@ -48,6 +51,9 @@ const routes: Readonly<RoutePaths> = {
   orderHistory: '/orders',
   about: '/about',
   contact: '/contact',
+
+  // category
+  mobile: '/mobile',
 }
 
 export default routes

@@ -1,0 +1,38 @@
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.nav-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+    position: relative;
+    color: var(--text-color);
+    padding: 16px 24px;
+    font-size: 1.5rem;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: var(--white-color);
+        bottom: 0;
+        left: 50%;
+        border-radius: 8px;
+        transform: translateX(-50%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+            background-color: var(--second-color);
+        }
+    }
+}
