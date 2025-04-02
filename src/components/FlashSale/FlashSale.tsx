@@ -7,6 +7,7 @@ import { Navigation } from 'swiper/modules'
 import '/node_modules/swiper/swiper-bundle.css'
 
 import style from './FlashSale.module.scss'
+import ItemCard from '../ItemCard'
 
 const cx = classNames.bind(style)
 
@@ -82,25 +83,20 @@ export default function FlashSale({
         >
           {listProduct.map((item) => (
             <SwiperSlide key={item._id}>
-              <Link className={cx('it_wrap')} to={`/product/${item._id}`}>
-                <div className={cx('it_img')}>
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className={cx('it_content')}>
-                  <h2 className={cx('it_name')}>{item.name}</h2>
-                  <div className={cx('it_price', 'd-flex')}>
-                    <p>{item.price}</p>
-                    <p>{item.oldPrice}</p>
-                  </div>
-                </div>
-              </Link>
+              <ItemCard
+                link={`/product/${item._id}`}
+                name={item.name}
+                price={item.price}
+                oldPrice={item.oldPrice}
+                image={item.image}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
         <button className={cx('swiper-prev')} ref={navPrevRef}>
           <svg
             fill="currentColor"
-            enable-background="new 0 0 13 20"
+            enableBackground="new 0 0 13 20"
             viewBox="0 0 13 20"
             x="0"
             y="0"
@@ -111,7 +107,7 @@ export default function FlashSale({
         <button className={cx('swiper-next')} ref={navNextRef}>
           <svg
             fill="currentColor"
-            enable-background="new 0 0 13 21"
+            enableBackground="new 0 0 13 21"
             viewBox="0 0 13 21"
             x="0"
             y="0"

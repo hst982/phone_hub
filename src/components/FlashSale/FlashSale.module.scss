@@ -102,55 +102,55 @@
     transform: translateX(-50%);
 }
 
-.it_wrap {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px;
-    box-shadow: 0 2px 12px rgb(0 0 0 / 12%);
-    border-radius: 12px;
+// .it_wrap {
+//     display: flex;
+//     flex-direction: column;
+//     text-decoration: none;
+//     color: var(--text-color);
+//     padding: 10px;
+//     box-shadow: 0 2px 12px rgb(0 0 0 / 12%);
+//     border-radius: 12px;
 
-    &:hover {
-        .it_img {
-            transform: scale(1.05);
-        }
+//     &:hover {
+//         .it_img {
+//             transform: scale(1.05);
+//         }
 
-        .it_name {
-            color: var(--primary-color);
-        }
-    }
-}
+//         .it_name {
+//             color: var(--primary-color);
+//         }
+//     }
+// }
 
-.it_img {
-    padding: 10px 20px;
-    transition: all 0.2s linear;
-}
+// .it_img {
+//     padding: 10px 20px;
+//     transition: all 0.2s linear;
+// }
 
-.it_content {
-    margin-top: 10px;
-}
+// .it_content {
+//     margin-top: 10px;
+// }
 
-.it_name {
-    font-size: 1.8rem;
-    height: 60px;
-    line-height: 1.2;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-word;
-    transition: all 0.2s linear;
-}
+// .it_name {
+//     font-size: 1.8rem;
+//     height: 60px;
+//     line-height: 1.2;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 3;
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     word-break: break-word;
+//     transition: all 0.2s linear;
+// }
 
-.it_price {
-    align-items: center;
-    color: var(--second-color);
+// .it_price {
+//     align-items: center;
+//     color: var(--second-color);
 
-    p+p {
-        margin-left: 10px;
-        color: #757575;
-        text-decoration: line-through;
-    }
-}
+//     p+p {
+//         margin-left: 10px;
+//         color: #757575;
+//         text-decoration: line-through;
+//     }
+// }

@@ -12,6 +12,8 @@ import '/node_modules/swiper/swiper-bundle.css'
 import style from './Home.module.scss'
 import images from '../../assets/images'
 import FlashSale from '../../components/FlashSale'
+import CardProduct from '../../components/CardProduct'
+import ItemCard from '../../components/ItemCard'
 
 const cx = classNames.bind(style)
 
@@ -23,6 +25,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-13-pro-max.png',
     price: 10000000,
     oldPrice: 18000000,
+    rate: 4,
   },
   {
     _id: 'ip8767862',
@@ -31,6 +34,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-14-pro-max.png',
     price: 12000000,
     oldPrice: 19000000,
+    rate: 4,
   },
   {
     _id: 'ip8767863',
@@ -39,6 +43,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro-max_5.png',
     price: 20000000,
     oldPrice: 25000000,
+    rate: 4,
   },
   {
     _id: 'ip8767864',
@@ -47,6 +52,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-pro-max.png',
     price: 35000000,
     oldPrice: 40000000,
+    rate: 4,
   },
   {
     _id: 'glxs25ultra12gb',
@@ -55,6 +61,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_3__3.png',
     price: 27990000,
     oldPrice: 33990000,
+    rate: 4.2,
   },
   {
     _id: 'xiaomi14tpro12512',
@@ -63,6 +70,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi_14t_pro_1_.png',
     price: 17990000,
     oldPrice: 14990000,
+    rate: 4.8,
   },
   {
     _id: 'xiaomi155256',
@@ -71,6 +79,7 @@ const data = [
       'https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-xiaomi-15_11_.png',
     price: 21990000,
     oldPrice: 24990000,
+    rate: 4.1,
   },
 ]
 
@@ -94,6 +103,41 @@ const bannerSlidesItem = [
     id: 4,
     src: images.bannerSlide4,
     alt: 'bannerSlide4',
+  },
+]
+
+const dataMenuMobile = [
+  {
+    title: 'Apple',
+    link: '/mobile/apple',
+  },
+  {
+    title: 'Samsung',
+    link: '/mobile/samsung',
+  },
+  {
+    title: 'Xiaomi',
+    link: '/mobile/xiaomi',
+  },
+  {
+    title: 'OPPO',
+    link: '/mobile/oppo',
+  },
+  {
+    title: 'Vivo',
+    link: '/mobile/vivo',
+  },
+  {
+    title: 'Realme',
+    link: '/mobile/realme',
+  },
+  {
+    title: 'Nothing',
+    link: '/mobile/nothing',
+  },
+  {
+    title: 'Nokia',
+    link: '/mobile/nokia',
   },
 ]
 
@@ -134,6 +178,20 @@ export default function HomePage() {
       </div>
       <div className={cx('content')}>
         <FlashSale timer={8200} listProduct={data} />
+        <CardProduct titleHeading="Top điện thoại" menu={dataMenuMobile}>
+          {data.map((item) => (
+            <ItemCard
+              key={item._id}
+              link={`product/${item._id}`}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              oldPrice={item.oldPrice}
+              rate={item.rate}
+              classname="itemCard"
+            />
+          ))}
+        </CardProduct>
       </div>
     </div>
   )
